@@ -1,0 +1,38 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>UTME CBT Practice</title>
+<meta name="description" content="JAMB style computer based test practice for UTME candidates.">
+<meta name="theme-color" content="#0b5d3b">
+<link rel="manifest" href="manifest.webmanifest">
+<link rel="icon" href="icons/icon.svg" type="image/svg+xml">
+<link rel="apple-touch-icon" href="icons/icon-192.png">
+<link rel="stylesheet" href="css/styles.css">
+</head>
+<body>
+<div id="app" aria-live="polite"></div>
+<div id="modal-root"></div>
+
+<script src="js/core.js"></script>
+<script src="js/bank-english.js"></script>
+<script src="js/bank-maths.js"></script>
+<script src="js/bank-physics.js"></script>
+<script src="js/bank-chemistry.js"></script>
+<script src="js/bank-biology.js"></script>
+<script src="js/bank-literature.js"></script>
+<script src="js/bank-government.js"></script>
+<script src="js/bank-crs.js"></script>
+<script src="js/bank-more.js"></script>
+<script src="js/app.js"></script>
+<script>
+  /* Offline support: needs https or localhost, so it is skipped when opened as a plain file. */
+  if ("serviceWorker" in navigator && /^https?:$/.test(location.protocol)) {
+    window.addEventListener("load", function () {
+      navigator.serviceWorker.register("sw.js").catch(function () { /* app still works online */ });
+    });
+  }
+</script>
+</body>
+</html>
